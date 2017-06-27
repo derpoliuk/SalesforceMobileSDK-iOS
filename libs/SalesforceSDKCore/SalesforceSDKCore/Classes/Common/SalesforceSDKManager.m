@@ -256,6 +256,11 @@ static NSString* ailtnAppName = nil;
     return YES;
 }
 
+- (void)cancelLaunch
+{
+    [self logoutCleanup];
+}
+
 + (NSString *)launchActionsStringRepresentation:(SFSDKLaunchAction)launchActions
 {
     if (launchActions == SFSDKLaunchActionNone)
